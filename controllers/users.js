@@ -13,10 +13,10 @@ router.get('/', async (req, res) => {
         let allUsers = await User.find({});
 
         res.status(200).json({ 
-            customers: allUsers 
+            users: allUsers 
         });
     } catch (error) {
-        console.log('customers page', error);
+        console.log('users page', error);
         res.status(500).json({
             message: 'There was an error. Please try again.'
         })

@@ -27,9 +27,14 @@ db.on('error', (error) => {
 
 // Import models here
 const User = require('./user');
+const Routine = require('./routine');
+const Exercise = require('./exercise');
+
 
 module.exports = {
     // model goes here
-    User
+    User,
+    Routine,
+    Exercise
 
 }

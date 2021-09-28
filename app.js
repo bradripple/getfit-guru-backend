@@ -23,6 +23,8 @@ app.get('/', async ( req, res ) => {
 
 //import models
 app.use('/users', require('./controllers/users'))
+app.use('/routines', require('./controllers/routines'))
+app.use('/exercises', require('./controllers/exercises'))
 
 app.listen(PORT, () => {
     console.log(`API running on ${PORT}, you beautiful creature!`);
