@@ -6,14 +6,18 @@ const jwt = require('jsonwebtoken');
 const { JWT_SECRET } = process.env;
 const passport = require('passport');
 
-const { Routine } = require('../models');
+const { Routine, User } = require('../models');
 
-router.get('/', async ( req, res ) => {
+router.get('/', passport.authenticate('jwt', { session: false }), async ( req, res ) => {
+    console.log('hit get routines route');
+    const { id } = req.user;
     try {
-        let allRoutines = await Routine.find({});
+        let currentUser = await User.findById(id);
+        let routines = await currentUser.populate('routines');
+        console.log('currentuser routines', routines);
 
         res.status(200).json({
-            routines: allRoutines
+            routines: currentUser.routines
         })
         
     } catch (error) {

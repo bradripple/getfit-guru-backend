@@ -55,6 +55,7 @@ router.post('/signup', async (req, res) => {
                         const newRoutine = new Routine({
                             day: day
                         })
+                        newRoutine.save();
                         newUser.routines.push(newRoutine)
                     });
                     newUser.save()
