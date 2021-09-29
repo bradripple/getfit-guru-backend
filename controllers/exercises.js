@@ -6,14 +6,18 @@ const jwt = require("jsonwebtoken");
 const { JWT_SECRET } = process.env;
 const passport = require("passport");
 
-const { Exercise } = require("../models");
+const { Exercise, User } = require("../models");
 
-router.get("/", async (req, res) => {
+router.get("/", passport.authenticate('jwt', { session: false }), async (req, res) => {
+  const { id } = req.user;
   try {
-    let allExercises = await Exercise.find({});
+    let currentUser = await User.findById(id);
+    let exercises = await currentUser.populate('exercises');
+    console.log('currentuser exercises', exercises);
 
     res.status(200).json({
-      exercises: allExercises,
+      exercises: currentUser.exercises,
+
     });
   } catch (error) {
     console.log("exercises page", error);
@@ -23,8 +27,10 @@ router.get("/", async (req, res) => {
   }
 });
 
-router.post("/", async (req, res) => {
+router.post("/", passport.authenticate('jwt', { session: false }), async (req, res) => {
   try {
+    const { id } = req.user;
+    let currentUser = await User.findById(id);
     let newExercise = await Exercise.create({
       type: req.body.type,
       muscleGroup: req.body.muscleGroup,
@@ -37,7 +43,8 @@ router.post("/", async (req, res) => {
     });
 
     console.log(newExercise);
-    res.json(newExercise);
+    currentUser.exercises.push(newExercise);
+    currentUser.save();
   } catch (error) {}
 });
 
