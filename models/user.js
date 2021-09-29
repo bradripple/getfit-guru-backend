@@ -23,7 +23,7 @@ const userSchema = new Schema ({
         type: Date,
         default: new Date()
     },
-    routine: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Routine'}]
+    routines: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Routine'}]
 });
 
 const User = mongoose.model('User', userSchema);

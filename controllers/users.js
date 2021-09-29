@@ -6,7 +6,7 @@ const jwt = require('jsonwebtoken');
 const { JWT_SECRET } = process.env;
 const passport = require('passport');
 
-const { User } = require('../models');
+const { User, Routine } = require('../models');
 
 router.get('/', async (req, res) => {
     try {
@@ -50,6 +50,14 @@ router.post('/signup', async (req, res) => {
                     if (err) console.log('==> Error inside of hash', err);
                     // Change the password in newUser to the hash
                     newUser.password = hash;
+                    const daysOfTheWeek = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
+                    daysOfTheWeek.forEach(day => {
+                        const newRoutine = new Routine({
+                            day: day
+                        })
+                        newRoutine.save();
+                        newUser.routines.push(newRoutine)
+                    });
                     newUser.save()
                     .then(createdUser => res.json(createdUser))
                     .catch(err => console.log(err));
