@@ -3,12 +3,11 @@ const { Schema } = mongoose;
 
 const routineSchema = new Schema ({
     day: {
-        type: Date,
-        default: new Date()
+        type: String,
+        enum: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
     },
     targetArea: {
         type: String,
-        required: true
     }, 
     exercises: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Exercise'}]
 });
