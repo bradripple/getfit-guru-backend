@@ -23,7 +23,10 @@ const userSchema = new Schema ({
         type: Date,
         default: new Date()
     },
-    routine: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Routine'}]
+    routine: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Routine'}],
+    exercises: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Exercise'}]
+
+
 });
 
 const User = mongoose.model('User', userSchema);
