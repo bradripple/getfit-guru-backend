@@ -16,6 +16,9 @@ const exerciseSchema = new Schema ({
         type: String,
         required: true
     },
+    img_url: String,
+    equipment: String,
+    steps: Array,
     durationGoal: Number,
     weightGoal: Number,
     repsGoal: Number,

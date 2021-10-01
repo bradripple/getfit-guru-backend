@@ -8,10 +8,7 @@ const passport = require("passport");
 
 const { Routine, User } = require("../models");
 
-router.get(
-  "/",
-  passport.authenticate("jwt", { session: false }),
-  async (req, res) => {
+router.get("/", passport.authenticate("jwt", { session: false }), async (req, res) => {
     // console.log('hit get routines route');
     const { id } = req.user;
     try {
@@ -37,10 +34,7 @@ router.get(
   }
 );
 
-router.put(
-  "/:id",
-  passport.authenticate("jwt", { session: false }),
-  async (req, res) => {
+router.put("/:id", passport.authenticate("jwt", { session: false }), async (req, res) => {
     const routineId = req.params.id;
     const exerciseId = req.body.exercise;
     console.log("we hit the put route");

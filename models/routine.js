@@ -9,7 +9,8 @@ const routineSchema = new Schema ({
     targetArea: {
         type: String,
     }, 
-    exercises: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Exercise'}]
+    exercises: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Exercise'}],
+    progress: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Progress'}]
 });
 
 const Routine = mongoose.model('Routine', routineSchema);
