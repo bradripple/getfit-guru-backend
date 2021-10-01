@@ -20,7 +20,7 @@ router.get("/", passport.authenticate("jwt", { session: false }), async (req, re
               model: "Exercise"
           }
       });
-      console.log('currentuser routines', routines);
+      // console.log('currentuser routines', routines);
 
       res.status(200).json({
         routines: currentUser.routines,
@@ -37,7 +37,7 @@ router.get("/", passport.authenticate("jwt", { session: false }), async (req, re
 router.put("/:id", passport.authenticate("jwt", { session: false }), async (req, res) => {
     const routineId = req.params.id;
     const exerciseId = req.body.exercise;
-    console.log("we hit the put route");
+    // console.log("we hit the put route");
 
     try {
       let currentRoutine = await Routine.findById(routineId);

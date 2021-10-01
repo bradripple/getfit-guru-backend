@@ -20,7 +20,7 @@ const exerciseSchema = new Schema ({
     equipment: String,
     steps: Array,
     durationGoal: Number,
-    weightGoal: Number,
+    weightGoal: String,
     repsGoal: Number,
     setsGoal: Number,
     distanceGoal: Number

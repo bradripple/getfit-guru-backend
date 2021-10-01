@@ -29,12 +29,14 @@ db.on('error', (error) => {
 const User = require('./user');
 const Routine = require('./routine');
 const Exercise = require('./exercise');
+const Progress = require('./progress');
 
 
 module.exports = {
     // model goes here
     User,
     Routine,
-    Exercise
+    Exercise,
+    Progress
 
 }

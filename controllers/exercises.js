@@ -24,6 +24,7 @@ router.get("/", async (req, res) => {
 });
 
 router.post("/", async (req, res) => {
+  console.log("we hit the post route ");
   try {
     let newExercise = await Exercise.create({
       type: req.body.type,
@@ -41,7 +42,10 @@ router.post("/", async (req, res) => {
 
     console.log(newExercise);
     res.json(newExercise);
-  } catch (error) {}
+  } catch (error) {
+    console.log('error', error);
+    res.json(error)
+  }
 });
 
 module.exports = router;
