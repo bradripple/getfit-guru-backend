@@ -49,5 +49,21 @@ router.put("/:id", passport.authenticate("jwt", { session: false }), async (req,
     } catch (error) {}
   }
 );
+router.delete("/:id", passport.authenticate("jwt", { session: false }), async (req, res) => {
+    console.log('req.body', req.body);
+    // const routineId = req.body.id;
+    const exerciseId = req.params.exercise;
+    console.log("we hit the delete route");
+
+    try {
+      // let currentRoutine = await Routine.findById(routineId);
+      // currentRoutine.exercises.pull(exerciseId);
+      // await currentRoutine.save();
+
+      console.log("currentRoutine exerciseDelete", currentRoutine);
+      res.json(currentRoutine);
+    } catch (error) {}
+  }
+);
 
 module.exports = router;
