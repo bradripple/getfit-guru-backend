@@ -24,7 +24,8 @@ const userSchema = new Schema ({
         default: new Date()
     },
     routines: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Routine'}],
-    progress: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Progress'}]
+    progress: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Progress'}],
+    goals: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Goal'}]
 
 });
 

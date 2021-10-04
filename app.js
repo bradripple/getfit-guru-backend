@@ -26,6 +26,7 @@ app.use('/users', require('./controllers/users'))
 app.use('/routines', require('./controllers/routines'))
 app.use('/exercises', require('./controllers/exercises'))
 app.use('/progress', require('./controllers/progress'))
+app.use('/goals', require('./controllers/goals'))
 
 app.listen(PORT, () => {
     console.log(`API running on ${PORT}, you beautiful creature!`);
