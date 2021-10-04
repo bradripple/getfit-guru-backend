@@ -38,6 +38,134 @@ const exercises = [
         "equipment": "CT",
         "steps": ["CT"]
     },
+    {
+        "type": "Academic or Scholar",
+        "muscleGroup": "Score",
+        "name": "CT",
+        "img_url": "CT",
+        "equipment": "CT",
+        "steps": ["CT"]
+    },
+    {
+        "type": "Academic or Scholar",
+        "muscleGroup": "Score",
+        "name": "CT",
+        "img_url": "CT",
+        "equipment": "CT",
+        "steps": ["CT"]
+    },
+    {
+        "type": "Academic or Scholar",
+        "muscleGroup": "Score",
+        "name": "CT",
+        "img_url": "CT",
+        "equipment": "CT",
+        "steps": ["CT"]
+    },
+    {
+        "type": "Academic or Scholar",
+        "muscleGroup": "Score",
+        "name": "CT",
+        "img_url": "CT",
+        "equipment": "CT",
+        "steps": ["CT"]
+    },
+    {
+        "type": "Academic or Scholar",
+        "muscleGroup": "Score",
+        "name": "CT",
+        "img_url": "CT",
+        "equipment": "CT",
+        "steps": ["CT"]
+    },
+    {
+        "type": "Academic or Scholar",
+        "muscleGroup": "Score",
+        "name": "CT",
+        "img_url": "CT",
+        "equipment": "CT",
+        "steps": ["CT"]
+    },
+    {
+        "type": "Academic or Scholar",
+        "muscleGroup": "Score",
+        "name": "CT",
+        "img_url": "CT",
+        "equipment": "CT",
+        "steps": ["CT"]
+    },
+    {
+        "type": "Academic or Scholar",
+        "muscleGroup": "Score",
+        "name": "CT",
+        "img_url": "CT",
+        "equipment": "CT",
+        "steps": ["CT"]
+    },
+    {
+        "type": "Academic or Scholar",
+        "muscleGroup": "Score",
+        "name": "CT",
+        "img_url": "CT",
+        "equipment": "CT",
+        "steps": ["CT"]
+    },
+    {
+        "type": "Academic or Scholar",
+        "muscleGroup": "Score",
+        "name": "CT",
+        "img_url": "CT",
+        "equipment": "CT",
+        "steps": ["CT"]
+    },
+    {
+        "type": "Academic or Scholar",
+        "muscleGroup": "Score",
+        "name": "CT",
+        "img_url": "CT",
+        "equipment": "CT",
+        "steps": ["CT"]
+    },
+    {
+        "type": "Academic or Scholar",
+        "muscleGroup": "Score",
+        "name": "CT",
+        "img_url": "CT",
+        "equipment": "CT",
+        "steps": ["CT"]
+    },
+    {
+        "type": "Academic or Scholar",
+        "muscleGroup": "Score",
+        "name": "CT",
+        "img_url": "CT",
+        "equipment": "CT",
+        "steps": ["CT"]
+    },
+    {
+        "type": "Academic or Scholar",
+        "muscleGroup": "Score",
+        "name": "CT",
+        "img_url": "CT",
+        "equipment": "CT",
+        "steps": ["CT"]
+    },
+    {
+        "type": "Academic or Scholar",
+        "muscleGroup": "Score",
+        "name": "CT",
+        "img_url": "CT",
+        "equipment": "CT",
+        "steps": ["CT"]
+    },
+    {
+        "type": "Academic or Scholar",
+        "muscleGroup": "Score",
+        "name": "CT",
+        "img_url": "CT",
+        "equipment": "CT",
+        "steps": ["CT"]
+    },
 ]
 
 // type: {
