@@ -30,6 +30,7 @@ const User = require('./user');
 const Routine = require('./routine');
 const Exercise = require('./exercise');
 const Progress = require('./progress');
+const Goal = require('./goal');
 
 
 module.exports = {
@@ -37,6 +38,7 @@ module.exports = {
     User,
     Routine,
     Exercise,
-    Progress
+    Progress,
+    Goal
 
 }

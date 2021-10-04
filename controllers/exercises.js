@@ -11,12 +11,12 @@ const { Exercise, User } = require("../models");
 router.get("/", passport.authenticate('jwt', { session: false }), async (req, res) => {
   const { id } = req.user;
   try {
-    let currentUser = await User.findById(id);
-    let exercises = await currentUser.populate('exercises');
-    console.log('currentuser exercises', exercises);
+    let exercises = await Exercise.find({});
+    // let exercises = await currentUser.populate('exercises');
+    // console.log('currentuser exercises', exercises);
 
     res.status(200).json({
-      exercises: currentUser.exercises,
+      exercises: exercises,
 
     });
   } catch (error) {

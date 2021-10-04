@@ -6,28 +6,28 @@ const jwt = require("jsonwebtoken");
 const { JWT_SECRET } = process.env;
 const passport = require("passport");
 
-const { Progress, User } = require("../models");
+const { Goal, User, Exercise } = require("../models");
 
 
 router.post("/", passport.authenticate("jwt", { session: false }), async (req, res) => {
-    console.log("we hit the post route ");
+    console.log("we hit the post route for goals", req.body);
     const { id } = req.user;
     
     try {
-        let newProgress = await Progress.create({
+        let newGoal = await Goal.create({
             exercise: req.body.exerciseId,
-            duration: req.body.duration,
-            weight: req.body.weight,
-            reps: req.body.reps,
-            sets: req.body.sets,
-            distance: req.body.distance
+            durationGoal: req.body.durationGoal,
+            weightGoal: req.body.weightGoal,
+            repsGoal: req.body.repsGoal,
+            setsGoal: req.body.setsGoal,
+            distanceGoal: req.body.distanceGoal
         });
         let currentUser = await User.findById(id);
-        currentUser.progress.push(newProgress);
+        currentUser.goals.push(newGoal);
         currentUser.save();
         
-        console.log(newProgress);
-        res.json(newProgress);
+        console.log('newGoal currentUser', currentUser);
+        res.json(newGoal);
     } catch (error) {
         console.log('error', error);
         res.json(error)
@@ -35,15 +35,15 @@ router.post("/", passport.authenticate("jwt", { session: false }), async (req, r
 });
 
 router.get("/", passport.authenticate("jwt", { session: false }), async (req, res) => {
-    // console.log('hit get routines route');
+    console.log('hit get goals route');
     const { id } = req.user;
     try {
-      let currentUser = await User.findById(id);
-      let progress = await currentUser.populate('progress');
-      // console.log('currentuser progress', progress);
+    //   let goals = await Goal.find({ user: id }).populate('exercise');
+      let currentUserGoals = await User.findById(id).populate('goals');
+      console.log('currentExercise goals:', currentUserGoals.goals);
 
       res.status(200).json({
-        progress: currentUser.progress,
+        goals: currentUserGoals.goals
       });
     } catch (error) {
       console.log("routines page", error);
@@ -53,6 +53,5 @@ router.get("/", passport.authenticate("jwt", { session: false }), async (req, re
     }
   }
 );
-
 
 module.exports = router;

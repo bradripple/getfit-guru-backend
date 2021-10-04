@@ -9,7 +9,6 @@ const exerciseSchema = new Schema ({
     },
     muscleGroup: {
         type: String,
-        enum: ['Chest', 'Back', 'Arms', 'Shoulders', 'Legs', 'Calves', 'Core', 'Heart' ],
         required: true
     },
     name: {
@@ -18,12 +17,7 @@ const exerciseSchema = new Schema ({
     },
     img_url: String,
     equipment: String,
-    steps: Array,
-    durationGoal: Number,
-    weightGoal: String,
-    repsGoal: Number,
-    setsGoal: Number,
-    distanceGoal: Number
+    steps: Array
 })
 
 
