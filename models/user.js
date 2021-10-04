@@ -25,6 +25,7 @@ const userSchema = new Schema ({
     },
     routines: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Routine'}],
     progress: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Progress'}]
+
 });
 
 const User = mongoose.model('User', userSchema);
