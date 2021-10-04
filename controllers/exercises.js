@@ -57,5 +57,6 @@ router.post("/", passport.authenticate('jwt', { session: false }), async (req, r
     res.json(error)
   }
 
+})
 
 module.exports = router;
