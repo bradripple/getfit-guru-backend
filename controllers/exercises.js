@@ -27,7 +27,9 @@ router.get("/", passport.authenticate('jwt', { session: false }), async (req, re
   }
 });
 
+
 router.post("/", passport.authenticate('jwt', { session: false }), async (req, res) => {
+
   try {
     const { id } = req.user;
     let currentUser = await User.findById(id);
@@ -46,9 +48,14 @@ router.post("/", passport.authenticate('jwt', { session: false }), async (req, r
     });
 
     console.log(newExercise);
+
     currentUser.exercises.push(newExercise);
     currentUser.save();
-  } catch (error) {}
-});
+    res.json(newExercise);
+  } catch (error) {
+    console.log('error', error);
+    res.json(error)
+  }
+
 
 module.exports = router;

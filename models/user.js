@@ -24,7 +24,8 @@ const userSchema = new Schema ({
         default: new Date()
     },
     routines: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Routine'}],
-    exercises: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Exercise'}]
+    progress: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Progress'}]
+
 });
 
 const User = mongoose.model('User', userSchema);

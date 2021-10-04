@@ -25,6 +25,7 @@ app.get('/', async ( req, res ) => {
 app.use('/users', require('./controllers/users'))
 app.use('/routines', require('./controllers/routines'))
 app.use('/exercises', require('./controllers/exercises'))
+app.use('/progress', require('./controllers/progress'))
 
 app.listen(PORT, () => {
     console.log(`API running on ${PORT}, you beautiful creature!`);

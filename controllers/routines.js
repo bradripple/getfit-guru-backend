@@ -20,7 +20,7 @@ router.get("/", passport.authenticate("jwt", { session: false }), async (req, re
               model: "Exercise"
           }
       });
-      console.log('currentuser routines', routines);
+      // console.log('currentuser routines', routines);
 
       res.status(200).json({
         routines: currentUser.routines,
@@ -37,7 +37,7 @@ router.get("/", passport.authenticate("jwt", { session: false }), async (req, re
 router.put("/:id", passport.authenticate("jwt", { session: false }), async (req, res) => {
     const routineId = req.params.id;
     const exerciseId = req.body.exercise;
-    console.log("we hit the put route");
+    // console.log("we hit the put route");
 
     try {
       let currentRoutine = await Routine.findById(routineId);
@@ -45,6 +45,22 @@ router.put("/:id", passport.authenticate("jwt", { session: false }), async (req,
       await currentRoutine.save();
 
       console.log("currentRoutine changes", currentRoutine);
+      res.json(currentRoutine);
+    } catch (error) {}
+  }
+);
+router.delete("/:id", passport.authenticate("jwt", { session: false }), async (req, res) => {
+    console.log('req.body', req.body);
+    // const routineId = req.body.id;
+    const exerciseId = req.params.exercise;
+    console.log("we hit the delete route");
+
+    try {
+      // let currentRoutine = await Routine.findById(routineId);
+      // currentRoutine.exercises.pull(exerciseId);
+      // await currentRoutine.save();
+
+      console.log("currentRoutine exerciseDelete", currentRoutine);
       res.json(currentRoutine);
     } catch (error) {}
   }
