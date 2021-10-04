@@ -9,7 +9,7 @@ const exerciseSchema = new Schema ({
     },
     muscleGroup: {
         type: String,
-        enum: ['Chest', 'Back', 'Arms', 'Shoulders', 'Legs', 'Calves', 'Core', 'Heart/Respiratory' ],
+        enum: ['Chest', 'Back', 'Arms', 'Shoulders', 'Legs', 'Calves', 'Core', 'Heart' ],
         required: true
     },
     name: {
