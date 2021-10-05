@@ -1,4 +1,4 @@
-const { Exercise } = require('../models');
+const { Exercise } = require("../models");
 
 // Make a function -> seedExercises
 // function seedExercises() {}
@@ -6,172 +6,663 @@ const { Exercise } = require('../models');
 // function seedExercises() {}
 
 const exercises = [
-    {
-        "type": "Resistance",
-        "muscleGroup": "Chest",
-        "name": "Chest Press",
-        "img_url": "https://i.imgur.com/5dMJ1ZY.jpg",
-        "equipment": "Barbell, Bench",
-        "steps": ["Lie face up on a flat bench, and grip a barbell with the hands slightly wider than shoulder-width. Press the feet into the ground and the hips into the bench while lifting the bar off the rack. Slowly lower the bar to the chest by allowing the elbows to bend out to the side. Stop when the elbows are just below the bench, and press feet into the floor to press the weight straight up to return to the starting position."]
-    },
-    {
-        "type": "Academic or Scholar",
-        "muscleGroup": "Score",
-        "name": "CT",
-        "img_url": "CT",
-        "equipment": "CT",
-        "steps": ["CT"]
-    },
-    {
-        "type": "Academic or Scholar",
-        "muscleGroup": "Score",
-        "name": "CT",
-        "img_url": "CT",
-        "equipment": "CT",
-        "steps": ["CT"]
-    },
-    {
-        "type": "Academic or Scholar",
-        "muscleGroup": "Score",
-        "name": "CT",
-        "img_url": "CT",
-        "equipment": "CT",
-        "steps": ["CT"]
-    },
-    {
-        "type": "Academic or Scholar",
-        "muscleGroup": "Score",
-        "name": "CT",
-        "img_url": "CT",
-        "equipment": "CT",
-        "steps": ["CT"]
-    },
-    {
-        "type": "Academic or Scholar",
-        "muscleGroup": "Score",
-        "name": "CT",
-        "img_url": "CT",
-        "equipment": "CT",
-        "steps": ["CT"]
-    },
-    {
-        "type": "Academic or Scholar",
-        "muscleGroup": "Score",
-        "name": "CT",
-        "img_url": "CT",
-        "equipment": "CT",
-        "steps": ["CT"]
-    },
-    {
-        "type": "Academic or Scholar",
-        "muscleGroup": "Score",
-        "name": "CT",
-        "img_url": "CT",
-        "equipment": "CT",
-        "steps": ["CT"]
-    },
-    {
-        "type": "Academic or Scholar",
-        "muscleGroup": "Score",
-        "name": "CT",
-        "img_url": "CT",
-        "equipment": "CT",
-        "steps": ["CT"]
-    },
-    {
-        "type": "Academic or Scholar",
-        "muscleGroup": "Score",
-        "name": "CT",
-        "img_url": "CT",
-        "equipment": "CT",
-        "steps": ["CT"]
-    },
-    {
-        "type": "Academic or Scholar",
-        "muscleGroup": "Score",
-        "name": "CT",
-        "img_url": "CT",
-        "equipment": "CT",
-        "steps": ["CT"]
-    },
-    {
-        "type": "Academic or Scholar",
-        "muscleGroup": "Score",
-        "name": "CT",
-        "img_url": "CT",
-        "equipment": "CT",
-        "steps": ["CT"]
-    },
-    {
-        "type": "Academic or Scholar",
-        "muscleGroup": "Score",
-        "name": "CT",
-        "img_url": "CT",
-        "equipment": "CT",
-        "steps": ["CT"]
-    },
-    {
-        "type": "Academic or Scholar",
-        "muscleGroup": "Score",
-        "name": "CT",
-        "img_url": "CT",
-        "equipment": "CT",
-        "steps": ["CT"]
-    },
-    {
-        "type": "Academic or Scholar",
-        "muscleGroup": "Score",
-        "name": "CT",
-        "img_url": "CT",
-        "equipment": "CT",
-        "steps": ["CT"]
-    },
-    {
-        "type": "Academic or Scholar",
-        "muscleGroup": "Score",
-        "name": "CT",
-        "img_url": "CT",
-        "equipment": "CT",
-        "steps": ["CT"]
-    },
-    {
-        "type": "Academic or Scholar",
-        "muscleGroup": "Score",
-        "name": "CT",
-        "img_url": "CT",
-        "equipment": "CT",
-        "steps": ["CT"]
-    },
-    {
-        "type": "Academic or Scholar",
-        "muscleGroup": "Score",
-        "name": "CT",
-        "img_url": "CT",
-        "equipment": "CT",
-        "steps": ["CT"]
-    },
-    {
-        "type": "Academic or Scholar",
-        "muscleGroup": "Score",
-        "name": "CT",
-        "img_url": "CT",
-        "equipment": "CT",
-        "steps": ["CT"]
-    },
-    {
-        "type": "Academic or Scholar",
-        "muscleGroup": "Score",
-        "name": "CT",
-        "img_url": "CT",
-        "equipment": "CT",
-        "steps": ["CT"]
-    },
-]
+  {
+    type: "Resistance",
+    muscleGroup: "Chest",
+    name: "Chest Press",
+    img_url: "https://i.imgur.com/5dMJ1ZY.jpg",
+    equipment: "Barbell, Bench",
+    steps: [
+      "Lie face up on a flat bench, and grip a barbell with the hands slightly wider than shoulder-width. Press the feet into the ground and the hips into the bench while lifting the bar off the rack. Slowly lower the bar to the chest by allowing the elbows to bend out to the side. Stop when the elbows are just below the bench, and press feet into the floor to press the weight straight up to return to the starting position.",
+    ],
+  },
+  {
+    type: "Resistance",
+    muscleGroup: "Chest",
+    name: "Close-grip Bench Press",
+    img_url: "https://imgur.com/XSvN4sS.jpg",
+    equipment: "Barbell",
+    steps: [
+      "Lie face up on a barbell bench, then reach up and grip the bar with the hands directly in line with the shoulders and the elbows pointed towards the feet. Unrack the bar and bring it towards the chest by bending the elbows and keeping them close to the ribs. Push the feet into the floor, and press the hips into the bench as the bar is pushed away from the chest to return to the starting position.",
+    ],
+  },
+  {
+    type: "Resistance",
+    muscleGroup: "Chest",
+    name: "Incline Chest Press",
+    img_url: "https://imgur.com/7priFrR.jpg",
+    equipment: "Bench, Dumbbells",
+    steps: [
+      "Pick up the dumbbells off the floor using a neutral grip (palms facing in). Position the ends of the dumbbells in your hip crease, and sit down on the edge of an incline bench. To get into position, lay back and keep the weights close to your chest. Once you are in position, take a deep breath, and press the dumbbells to lockout at the top. Slowly lower the dumbbells under control as far as comfortably possible-the handles should be about level with your chest. Contract the chest and push the dumbbells back up to the starting position. Repeat for the desired number of repetitions.",
+    ],
+  },
+  {
+    type: "Resistance",
+    muscleGroup: "Chest",
+    name: "Lying Chest Fly",
+    img_url: "https://imgur.com/gUmW91n.jpg",
+    equipment: "Bench, Dumbbells",
+    steps: [
+      "Start by lying on your back with your feet placed flat on the floor. Grasp the dumbbells with your palms facing inward. Push the dumbbells directly above your chest with lightly bent elbows, keeping your wrists straight. Inhale and slowly lower the dumbbells toward the floor at shoulder height, maintaining a soft roundness with your arms (think: hugging a tree). Stop when the backs of your upper arms touch the mat. Exhale and slowly raise the dumbbells back to the starting position while maintaining the arc in your arms.",
+    ],
+  },
+  {
+    type: "Resistance",
+    muscleGroup: "Chest",
+    name: "Chest Dips",
+    img_url: "https://imgur.com/NRdHqZS.jpg",
+    equipment:
+      "Parallel bars or two flat parallel surfaces you can dip between (stable bar stools also work)",
+    steps: [
+      "Grab the bars or place hands on the flat surface and hold your body at arm’s length (arms locked), knees bent so you don’t touch the floor. With control, slowly lower your body keeping your elbows pointed out slightly until you feel a slight stretch in your chest. Be careful not to go down too low; you don’t want to hurt your shoulder joint. While exhaling, contract your chest to bring your body back to the start position.",
+    ],
+  },
+  {
+    type: "Resistance",
+    muscleGroup: "Chest",
+    name: "Medicine Ball Push-ups",
+    img_url: "https://imgur.com/CRsm3vB.jpg",
+    equipment: "Medicine Ball",
+    steps: [
+      "1) Begin in a plank position with right hand on top of medicine ball and left hand on the floor. Hands are directly below shoulders with arms long. 2) Begin to lower chest toward the floor, bending your elbows and keeping body straight. (If this is too difficult, bend your knees and place them on the ground.) 3) Press up to start position then roll the ball over to the left hand. Repeat the push-up with ball under left hand. This is one repetition.",
+    ],
+  },
+  {
+    type: "Resistance",
+    muscleGroup: "Chest",
+    name: "Plank-ups",
+    img_url: "https://imgur.com/qSA5VZu.jpg",
+    equipment: "No Equipment",
+    steps: [
+      "Start in a push-up position with the hands under the shoulders and the legs stretched out directly behind. Squeeze the thigh and glute muscles to keep body and legs in a straight line, and lower down to the elbows one elbow at a time. From this position on the elbows, press the hands into the floor one at a time to return to the push-up position. ",
+    ],
+  },
+  {
+    type: "Resistance",
+    muscleGroup: "Chest",
+    name: "Standing Chest Fly",
+    img_url: "https://imgur.com/wW9oRPw.jpg",
+    equipment: "Resistance Bands/Cables",
+    steps: [
+      "Place two cable pulleys slightly above the shoulder height with handle attachments, grip one handle in each hand and step forward so that the arms are outstretched to the sides. With the elbows slightly bent, slowly bring both hands together in front of the body. When the hands are together, pause for one second before slowly returning the arms to the starting position.",
+    ],
+  },
+  {
+    type: "Resistance",
+    muscleGroup: "Chest",
+    name: "Plyometric Push-Ups",
+    img_url: "https://imgur.com/h7HywTe.jpg",
+    equipment: "No Equipment",
+    steps: [
+      "Start in a plank position on your knees, kneeling forward slightly to get in a high plank position. Align your palms under your shoulders. Bend your arms to lower yourself into a pushup. Immediately push back up explosively, taking your hands off the floor.",
+    ],
+  },
+  {
+    type: "Resistance",
+    muscleGroup: "Chest",
+    name: "Decline Push-Ups",
+    img_url: "https://imgur.com/ilazPNr.jpg",
+    equipment: "No Equipment",
+    steps: [
+      "Kneel down with your back to the bench. Put your hands on the floor, shoulders over your wrists and elbows at 45 degrees. Place your feet on top of the bench. Brace your core, glutes, and quads. Bend your elbows and lower your chest to the floor, keeping your back and neck straight. Push into the floor to return to starting position, extending your elbows. Complete 2 to 4 sets of 8 to 20 repetitions.",
+    ],
+  },
+  {
+    type: "Resistance",
+    muscleGroup: "Back",
+    name: "Bent-over Row",
+    img_url: "https://imgur.com/Z4ifpjN.jpg",
+    equipment: "Barbell",
+    steps: [
+      "Grip a barbell with palms down so that the wrists, elbows, and shoulders are in a straight line. Lift the bar from the rack, bend forward at the hips, and keep the back straight with a slight bend in the knees. Lower the bar towards the floor until the elbows are completely straight, and keep the back flat as the bar is pulled towards the belly button. Then slowly lower the bar to the starting position and repeat.",
+    ],
+  },
+  {
+    type: "Resistance",
+    muscleGroup: "Back",
+    name: "Pull-ups",
+    img_url: "https://imgur.com/UMx1fKr.jpg",
+    equipment: "Pull up bar",
+    steps: [
+      "1. Start with your hands on the bar approximately shoulder-width apart with your palms facing forward. 2. With arms extended above you, stick your chest out and curve your back slightly. That is your starting position. 3. Pull yourself up towards the bar using your back until the bar is at chest level while breathing out. 4. Slowly lower yourself to the starting position while breathing in. That is one rep.",
+    ],
+  },
+  {
+    type: "Resistance",
+    muscleGroup: "Back",
+    name: "Deadlift",
+    img_url: "https://imgur.com/WmnSMWn.jpg",
+    equipment: "Barbell, Bumper Plates and a pair of Bar Collars",
+    steps: [
+      "1. Walk up to the barbell until your shins are just one inch away – this will place the barbell directly over your midfoot, which is the balance point for all barbell exercises. Your heels should be 6-8 inches apart, a more narrow stance than your squat. 2. Lean over with stiff legs, and take a grip that places your elbows just outside your knees. Be careful not to move or roll the bar from your midfoot. 3. Bring your shins forward to touch the barbell – again without moving or rolling it away from your midfoot. Freeze your hips in place – they are not allowed to move from here. 4. Squeeze your chest up to tighten all the muscles of your back. Don’t drop your hips while you squeeze your chest up. This crucial step sets your lumbar spine in normal anatomical extension. 5. Drag the barbell up your legs while maintaining lumbar extension. Watch the video to see a simple demonstration of the five steps!",
+    ],
+  },
+  {
+    type: "Resistance",
+    muscleGroup: "Back",
+    name: "High Row",
+    img_url: "https://imgur.com/tLPIqAZ.jpg",
+    equipment: "Resistance Bands/Cables",
+    steps: [
+      "Stand with the feet hip-width apart, the hips straight, the back tall, and the knees slightly bent. Place the cable pulley at about shoulder-height, attach a rope handle, and hold one end of the rope in each hand with the palms facing down. Turn to face the machine. Lift the chest up and pull the elbows back until the hands are right in front of the shoulders, then pause for 2-3 seconds. Slowly straighten the arms to return the weight to the starting position.",
+    ],
+  },
+  {
+    type: "Resistance",
+    muscleGroup: "Back",
+    name: "Lat Pulldown",
+    img_url: "https://imgur.com/FRW2BjM.jpg",
+    equipment: "Resistance Bands/Cables",
+    steps: [
+      "Grasp the bar with a wide grip, looking forward with your torso upright. Retract your shoulder blades and pull the bar down in front of you to your upper chest. Squeeze your lats at the bottom of the move. Resist the temptation to lean back to aid the movement.",
+    ],
+  },
+  {
+    type: "Resistance",
+    muscleGroup: "Back",
+    name: "Seated Row",
+    img_url: "https://imgur.com/zUF0t8i.jpg",
+    equipment: "Resistance Bands/Cables",
+    steps: [
+      "Use a seated pulley cable machine and a narrow handle, and place the feet on the floor with knees bent and maintain a straight back. Hold the handle and lift the chest while slowly pulling the elbows backwards close to the rib cage until the handle touches the front of the stomach. Pause for one second before slowly straightening the arms to return the weight to the original starting position.",
+    ],
+  },
+  {
+    type: "Resistance",
+    muscleGroup: "Back",
+    name: "Standing Shrug",
+    img_url: "https://imgur.com/EOh04y3.jpg",
+    equipment: "Dumbells",
+    steps: [
+      " 1. Put yourself in a correct position. Stand straight with your feet planted firmly and your shoulder-width apart. Then grab the dumbbells with your hands at the shoulder-width. Your knees slightly bent. Keep the bar held straight and without hollow your back. 2. Raise your shoulders upwards slowly as high as you can toward your ears. Rotate both of them backward and down carefully at the same time without bending or hollow your back. You are going to feel the  right your back, neck, and shoulders muscles. Repeat the same process again to your desired reps.",
+    ],
+  },
+  {
+    type: "Resistance",
+    muscleGroup: "Back",
+    name: "Chest Supported Row",
+    img_url: "https://imgur.com/bQVWeiY.jpg",
+    equipment: "Incline Bench and Dumbells",
+    steps: [
+      " 1. Place your feet in the stirrups and your chest on the pad. 2. Reach down and grab the handles with both hands. 3. Let your arms hang with the weight. 4. Pull the weight up to your chest and try to pinch your shoulder blades together at the top. 5. Lower the weight back down. This completes one repetition.",
+    ],
+  },
+  {
+    type: "Resistance",
+    muscleGroup: "Back",
+    name: "Dumbell Pull-Over",
+    img_url: "https://imgur.com/TUy5yKM.jpg",
+    equipment: "Dumbells and Flat Bench",
+    steps: [
+      " 1. Lay sideways on the bench so that only your upper back is on the bench. 2. Brace yourself with your feet. 3. Take the dumbbell in both hands. 4. Keep your arms straight and hold the dumbbell over your chest. 5. Keeping your arms straight bring the dumbbell back behind your head. 6. Then bring it back over top of your chest. This completes one repetition.",
+    ],
+  },
+  {
+    type: "Resistance",
+    muscleGroup: "Back",
+    name: "Single-Arm Dumbell Row",
+    img_url: "https://imgur.com/jSenfoG.jpg",
+    equipment: "Dumbells and Flat Bench",
+    steps: [
+      "Stand to the right of your weight bench, holding a dumbbell in your right hand with your palm facing in. Place your left knee and your left hand on top of the bench for support. Let your right arm hang down and a bit forward. Pull your abdominals in and bend forward from the hips so that your back is naturally arched and roughly parallel to the floor, and your right knee is slightly bent. Tilt your chin toward your chest so that your neck is in line with the rest of your spine. Pull your right arm up until your elbow is pointing to the ceiling, your upper arm is parallel to the floor, and your hand comes to the outside of the ribcage. Lower the weight slowly back down.",
+    ],
+  },
+
+  {
+    type: "Resistance",
+    muscleGroup: "Arms",
+    name: "Bicep Curl",
+    img_url: "https://imgur.com/78md8q3.jpg",
+    equipment: "Barbell",
+    steps: [
+      "Hold the barbell with both hands facing up so the wrists, elbows, and shoulders are in a straight line about shoulder-width apart. Lift the barbell toward the shoulders while bending the elbows and keeping them next to the middle of the body. Slowly lower the weight to return to the starting position. Keep chest still, using just the arms for the movement.",
+    ],
+  },
+  {
+    type: "Resistance",
+    muscleGroup: "Arms",
+    name: "Hammer Curl",
+    img_url: "https://imgur.com/hTK8n2r.jpg",
+    equipment: "Dumbells",
+    steps: [" 1. Stand up straight with your torso upright. Hold a dumbbell in each hand at arms-length. Your elbows should be close to your torso. 2. The palms of your hands should be facing your torso. This is the starting position for the exercise. 3. Curl the weight forward while contracting your biceps. Your upper arm should remain stationary. Continue to lift the weight until your biceps are fully contracted and the dumbbell is at shoulder level. Hold the contraction for a moment as you squeeze your biceps. 4. Inhale and slowly start to bring the dumbbells back to the starting position. 5. Repeat for the desired number of reps."],
+  },
+  {
+    type: "Resistance",
+    muscleGroup: "Arms",
+    name: "Lying Barbell Triceps Extensions",
+    img_url: "https://imgur.com/XVjhAN1.jpg",
+    equipment: "Barbell, Bench",
+    steps: ["Lie down on the bench and hold the barbell with a shoulder-width grip directly above your upper chest with arms straight. Then, tuck your elbows in and slowly lower the barbell down by only bending your forearms until the bar goes slightly past your head. Inhale during this portion of the exercise. Now, extend your forearms back up by flexing your triceps but don’t lock out your elbows. Exhale during this portion of the exercise. Repeat for the desired number of reps."],
+  },
+  {
+    type: "Resistance",
+    muscleGroup: "Arms",
+    name: "Seated Bent-Knee Biceps Stretch",
+    img_url: "https://imgur.com/2kHU4uM.jpg",
+    equipment: "No Equipment",
+    steps: ["Sit with bent knees and your feet flat on the floor in front of your hips. Place your hands on the floor behind you with your fingers facing away from your body. Evenly distribute your weight between your feet, buttocks, and arms. Slowly scoot your buttocks forward, toward your feet, without moving your hands. Hold this position for up to 30 seconds. Return to the starting position and relax for a few moments. Repeat 2 to 4 times."],
+  },
+  {
+    type: "Resistance",
+    muscleGroup: "Arms",
+    name: "Triceps Pressdown",
+    img_url: "https://imgur.com/t0sTuM3.jpg",
+    equipment: "Resistance Bands/Cables",
+    steps: ["Stand with the feet hip-width apart, the hips straight, the back straight and tall, and the knees slightly bent. Place the cable pulley at the highest position, use a rope attachment, and grip the ends firmly in both hands. Pull the elbows close to the sides, and slowly push the hands down towards the floor, straightening the arms all the way then bending the elbows to return to the starting position."],
+  },
+  {
+    type: "Resistance",
+    muscleGroup: "Arms",
+    name: "Triceps Kickback",
+    img_url: "https://imgur.com/KaPtWm2.jpg",
+    equipment: "Dumbbells",
+    steps: ["Stand facing a low pulley cable machine. Bend forward slightly at the waist so your torso is almost parallel to the floor. Engage your core and keep your head, neck, and spine in one line. Place one hand on your thigh for support. On an exhale, engage your triceps as you slowly extend your arm back as far as you can, keeping your arm in tight by your side. Pause here, then inhale as your return your arm to the starting position. Do 2 to 3 sets of 10 to 15 reps."],
+  },
+  {
+    type: "Resistance",
+    muscleGroup: "Arms",
+    name: "Dumbbell Preacher Curl",
+    img_url: "https://imgur.com/FCicCRo.jpg",
+    equipment: "Preacher Curl Bench/Dumbbell ",
+    steps: [" 1. Place a barbell on the preacher bench barbell holder and sit on the preacher bench. 2. Place your torso against the preacher bench padding and rest your arms against the arm padding. 3. With your palms facing up, grasp the barbell with arms no wider than shoulder width apart. This is your starting position. 4. Exhale as your raise the barbell to your shoulders. 5. Hold the contraction for a moment as you squeeze the biceps. 6. Inhale as you lower the barbell back toward the starting position. 7. Repeat for a complete set."],
+  },
+  {
+    type: "Resistance",
+    muscleGroup: "Arms",
+    name: "Triceps Dips",
+    img_url: "https://imgur.com/ngRFoBG.jpg",
+    equipment: "Bench or Chair",
+    steps: ["1. Place your hands behind you onto a chair, so that your fingers face forward. 2. Extend your legs and start bending your elbows. 3. Lower your body until your arms are at a 90-degree angle. 4. Lift your body back up until your arms are straight. 5. Repeat."],
+  },
+  {
+    type: "Resistance",
+    muscleGroup: "Arms",
+    name: "Medicine Ball Slam",
+    img_url: "https://imgur.com/GRIpiwl.jpg",
+    equipment: "Medicine Ball",
+    steps: ["1. Grab a medicine ball and stand with feet shoulder-width apart. Bring medicine ball above your head with arms slightly bent. 2. Begin exercise by reaching back as far as you can, then swing arms forward and slam the ball against the ground in front of you as hard as possible. 3. Catch ball as it bounces off the ground and repeat. Slam ball as many times and as quickly as you can."],
+  },
+  {
+    type: "Resistance",
+    muscleGroup: "Arms",
+    name: "Overhead Triceps Extension",
+    img_url: "https://imgur.com/nibYjJv.jpg",
+    equipment: "Dumbells",
+    steps: ["With feet shoulder-width apart and core tight, hold a dumbbell with both hands. Lift the dumbbell until your arms are fully extended with palms facing the roof and elbows pointing forward. This is the start position. Bending at the elbows and squeezing your triceps, slowly lower the dumbbell behind your head. Slowly return to start position and repeat."],
+  },
+
+  {
+    type: "Resistance",
+    muscleGroup: "Shoulders",
+    name: "Barbell Overhead Shoulder Press",
+    img_url: "https://imgur.com/St62x2H.jpg",
+    equipment: "Standing Press/Barbells",
+    steps: ["Place the end of your thumb on the line where the rough part of the bar meets the smooth and grip the bar here. Lift the bar out of the rack and allow it to rest on your shoulders. Keep your elbows in front of the bar. Engage your glutes, hips, and core, while keeping your chest tall. Take a big breath and lock it into your diaphragm to create a strong base. Initiate the movement and press the bar overhead. Lean your head back and keep the bar close to your face as you bring it upwards. As the bar gets overhead, bring your head back to neutral. The bar should be in line with your heels. While bringing the bar down, do the same process in reverse.",
+    ],
+  },
+  {
+    type: "Resistance",
+    muscleGroup: "Shoulders",
+    name: "Diagonal Raise",
+    img_url: "https://imgur.com/xddntR0.jpg",
+    equipment: "Dumbells",
+    steps: ["Stand with the feet hip-width apart, hold one dumbbell in the left hand with the left arm down straight and the left palm resting in front of the right thigh. Press the feet into the ground, keep the hips straight and the back tall. Raise the left arm across the body and out to the left side so that the weight is brought up to shoulder-height and the arm is kept straight.",
+    ],
+  },
+  {
+    type: "Resistance",
+    muscleGroup: "Shoulders",
+    name: "Lateral Raise",
+    img_url: "https://imgur.com/YnNJ3tu.jpg",
+    equipment: "Dumbells",
+    steps: ["1. Standing in a shoulder-width stance, grab a pair of dumbbells with palms facing inward and let them hang at your sides. 2. Raise your arms out to the sides until they're at shoulder level. Pause, then lower the weights back to the starting position.",
+    ],
+  },
+  {
+    type: "Resistance",
+    muscleGroup: "Shoulders",
+    name: "Rotational Overhead Press",
+    img_url: "https://imgur.com/tOd4anC.jpg",
+    equipment: "Dumbells",
+    steps: ["Stand with the feet hip-width apart, hold one dumbbell in each hand with the palms facing each other and the weights in front of the shoulders. Keep the back straight and turn to the right, and when facing the 3 o’clock position press the right hand straight into the air. To lower the weight, pull the elbow back down and keep the back straight while turning to the left. When facing the 9 o’clock position on the left side, press the left hand straight into the air.",
+    ],
+  },
+  {
+    type: "Resistance",
+    muscleGroup: "Shoulders",
+    name: "Rotator Cuff External/Internal Rotation",
+    img_url: "https://imgur.com/b7KDXR2.jpg",
+    equipment: "Resistance Bands/Cables",
+    steps: [" External: Place a cable pulley at about waist-height and attach a single handle, holding it in the left hand so that the right side of the body is closest to the machine. Keep the left elbow tucked in to the body, and turn the shoulder back away from the body to move the left hand to the outside of the body (the cable should pass in front of the stomach). Pause for one second before slowly lowering the weight to the starting position. Internal: Place a cable pulley at about waist-height, and attach a single handle holding it in the right hand with the right side of body closest to the machine. Keep the right elbow tucked in to the body, and rotate the shoulder forward to bring the right hand to the front of stomach. Pause for one second before slowly lowering the weight, still keeping elbow close to the body.",
+    ],
+  },
+  {
+    type: "Resistance",
+    muscleGroup: "Shoulders",
+    name: "Seated Shoulder Press",
+    img_url: "https://imgur.com/lGxPqdL.jpg",
+    equipment: "Incline Bench/Dumbells",
+    steps: ["Once you’re seated, rest one dumbbell on each thigh. Sit with your lower back firmly against the back of the bench. Keep your shoulders and back as straight as possible. Raise the dumbbells from your thighs and bring them to shoulder height. If you have heavy dumbbells, raise your thighs one at a time to help lift the dumbbells. Raising a heavy dumbbell with only your arm could cause injury. With the dumbbells at shoulder height, rotate your palms so that they face forward. If you prefer, you can also complete a dumbbell press with your palms facing your body. Make sure your forearms are perpendicular to the ground. Begin to press the dumbbells above your head until your arms fully extend. Hold the weight above your head for a moment, and then lower the dumbbells back to shoulder height. Complete the desired number of reps. If you’re a beginner, start with 1 set of 8–10 reps.",
+    ],
+  },
+  {
+    type: "Resistance",
+    muscleGroup: "Shoulders",
+    name: "Shoulder Packing",
+    img_url: "https://imgur.com/FE11BeK.jpg",
+    equipment: "No Equipment",
+    steps: ["Starting Position: Stand with your feet hip-width apart, toes pointing forward, with arms by your sides. Contract your abdominal muscles (“brace”) to stabilize your spine while holding your chest up and out with your head tilted slightly up. Exhale and depress and retract your scapulae (pull shoulders down and back) without arching your low back. Hold the contraction for 5-10 seconds."],
+  },
+  {
+    type: "Resistance",
+    muscleGroup: "Shoulders",
+    name: "Supine Shoulder Flexion",
+    img_url: "https://imgur.com/3L1y6RF.jpg",
+    equipment: "No Equipment",
+    steps: ["Lie on back. Clasp fingers together. Raise arms up, straightening the elbows. Move arms over head until a gentle stretch is felt under the arms. Hold and return to start position and repeat. Hold end position for 20-30 seconds. Repeat for 5-6 times",
+    ],
+  },
+  {
+    type: "Resistance",
+    muscleGroup: "Shoulders",
+    name: "Dumbell V-Raise",
+    img_url: "https://imgur.com/RlbQH1i.jpg",
+    equipment: "Dumbells",
+    steps: ["Stand with feet hip-width apart, holding dumbbells in front with palms facing your thighs. With straight elbows, lift the dumbells up overhead making a V shape with both arms. Slowly lower back down into the starting position and repeat.",
+    ],
+  },
+  {
+    type: "Resistance",
+    muscleGroup: "Shoulders",
+    name: "Pike Press-Up",
+    img_url: "https://imgur.com/2k2wvOC.jpg",
+    equipment: "No Equipment",
+    steps: ["1. Get down on your hands and feet, with your hands shoulder-width apart, your legs straight and your hips up. 2. Bend your elbows, until your arms form a 90-degree angle, and bring your head close to the mat. 3. Straighten your elbows, pushing your body away from the mat, and return to the starting position. 4. Repeat until the set is complete.",
+    ],
+  },
+
+  {
+    type: "Resistance",
+    muscleGroup: "Legs",
+    name: "Forward Lunge",
+    img_url: "https://imgur.com/ioT7UgH.jpg",
+    equipment: "No Equipment",
+    steps: ["1. Stand tall with feet hip-width apart. Engage your core. 2. Take a big step forward with right leg. Start to shift your weight forward so heel hits the floor first. 3. Lower your body until right thigh is parallel to the floor and right shin is vertical. It’s OK if knee shifts forward a little as long as it doesn’t go past right toe. If mobility allows, lightly tap left knee to the floor while keeping weight in right heel. 4. Press into right heel to drive back up to starting position. 5. Repeat on the other side.",
+    ],
+  },
+  {
+    type: "Resistance",
+    muscleGroup: "Legs",
+    name: "Leg Press",
+    img_url: "https://imgur.com/FK92wMB.jpg",
+    equipment: "Leg Press Machine",
+    steps: ["1. Sit down on a leg press machine and place your legs on the platform in front of you. Your feet should be positioned approximately a foot to one and half feet apart. 2. Lower the safety bars holding the platform in place. Press the platform all the way up until your legs are fully extended, without locking your knees. This is the starting position. 3. As you inhale, slowly lower the platform until your upper and lower legs make a 90-degree angle. 4. Push with the heels of your feet and use your quadriceps to go back to the starting position. Exhale as you do so. 5. Repeat for the number of reps in your set. Make sure that the safety pins are locked properly once you have finished.",
+    ],
+  },
+  {
+    type: "Resistance",
+    muscleGroup: "Legs",
+    name: "Barbell Hack Squat",
+    img_url: "https://imgur.com/7638CMG.jpg",
+    equipment: "Barbell",
+    steps: ["Position barbell just behind legs. With feet flat on floor, squat down and grasp barbell from behind with overhand grip. Lift bar by extending hips and knees to full extension. Squat down by bending hips back while allowing knees to bend forward, keeping back straight and knees pointed same direction as feet. Descend until thighs are close to parallel to floor and bar is behind lower leg. Repeat.",
+    ],
+  },
+  {
+    type: "Resistance",
+    muscleGroup: "Legs",
+    name: "Nordic Hamstring Curl",
+    img_url: "https://imgur.com/fBQDZyZ.jpg",
+    equipment: "No Equipment",
+    steps: ["With the back of your ankles secured while in a kneeling position, position your hands down by your waist but with the palms facing away from you as if you were doing a push-up. Bend your hips at a 30-degree angle and do not change this position during the movement while maintaining a relatively upright torso. Very slowly lower your body down to the floor and when you reach halfway down, place your hands on the floor to control your body the rest of the way down. Push yourself back up to the starting position and repeat",
+    ],
+  },
+  {
+    type: "Resistance",
+    muscleGroup: "Legs",
+    name: "Leg Extension",
+    img_url: "https://imgur.com/hAB5Pxx.jpg",
+    equipment: "Leg Extension Machine",
+    steps: ["1. Sit on a leg extension machine. Position your legs under the pad and grasp the side bars with your hands. This is the starting position. 2. Extend your legs to the maximum, exhaling as you do so. Pause a second in this contracted position. 3. Lower the weight back to the original position as you inhale. Make sure your legs don't go past the 90-degree angle point. 4. Repeat for the desired number of reps.",
+    ],
+  },
+  {
+    type: "Resistance",
+    muscleGroup: "Legs",
+    name: "Prowler Push",
+    img_url: "https://imgur.com/S7MuFml.jpg",
+    equipment: "Prowler Sled",
+    steps: ["Load a prowler sled with weights. Position yourself behind the sled. Grip each bar with one hand. Bend at your waist. Drive your legs into the floor. Push the sled forward.",
+    ],
+  },
+  {
+    type: "Resistance",
+    muscleGroup: "Legs",
+    name: "Dumbell Step-Up",
+    img_url: "https://imgur.com/YDKJ6mk.jpg",
+    equipment: "Dumbells/Bench",
+    steps: ["Keep your heel flat on the step, your knee should track slightly outwards. Step up, keeping your torso tall and proud. Brace your core and straighten your leg to bring yourself to standing on the step. Keeping your shoulders back and head up, lower your leg down slowly to the ground.",
+    ],
+  },
+  {
+    type: "Resistance",
+    muscleGroup: "Legs",
+    name: "Swiss Ball Leg Curl",
+    img_url: "https://imgur.com/08VGZ2V.jpg",
+    equipment: "Fitness Ball",
+    steps: ["1. Lie down with back flat on the floor and heels propped up on Swiss Ball. Arms should be flat on the floor and in line with your shoulders for stability. 2. Next, raise hips up so that they are in line between your knees and shoulders. 3. Begin hamstring curl by rolling ball backward toward you butt so that your feet are flat on the ball and knees extended toward the ceiling. Reverse movement back to starting position. This completes one rep.",
+    ],
+  },
+  {
+    type: "Resistance",
+    muscleGroup: "Legs",
+    name: "Kettle Press-Out",
+    img_url: "https://imgur.com/0auS2qv.jpg",
+    equipment: "KettleBell",
+    steps: ["1. Select a light kettlebell—this exercise places stress on the shoulders and lower back, two areas that are susceptible to injury—and grasp the handle with both hands, holding the weight at your chest. 2. With your weight on your heels, sink back into a squat. 3. Keeping elbows in, , slowly press the weight straight out. With your eyes focused on the top of the handle, draw the weight back to your chest. Stay in squat position.",
+    ],
+  },
+  {
+    type: "Resistance",
+    muscleGroup: "Legs",
+    name: "Jump Rope",
+    img_url: "https://imgur.com/kasI6eX.jpg",
+    equipment: "Jump Rope",
+    steps: ["1. Forward Jump Reps: 60 sec. Jump over the rope with both feet on every revolution, swinging the rope forward (the most basic jump). 2. Side-to-Side Reps: 60 sec. Jump a few inches to your left as you swing the rope. Then to your right. Get into a rhythm. 3. Backward Jump Reps: 60 sec. Swing the rope backward for each jump. 4. Single-Leg Jump-Left Reps: 60 sec. Jump on one foot; land softly. 5. Single-Leg Jump-Right Reps: 60 sec. Jump on the other foot.",
+    ],
+  },
+
+
+  {
+    type: "Resistance",
+    muscleGroup: "Calves",
+    name: "Ankle Flexion",
+    img_url: "https://imgur.com/tRyzqOY.jpg",
+    equipment: "Resistance Bands/Cables",
+    steps: ["Sit on the floor with your legs stretched out in front of you. Secure the band around a chair leg or a table leg, and then wrap it around one foot. Slowly point your toes up toward you and then return to the starting position. Do 3 sets of 10 flexes on each foot, three days a week.",
+    ],
+  },
+  {
+    type: "Resistance",
+    muscleGroup: "Calves",
+    name: "Standing Dumbell Calf Raises",
+    img_url: "https://imgur.com/Oj8yhb4.jpg",
+    equipment: "Dumbell",
+    steps: ["Stand on the edge of a step. Or, if you have a step-aerobics platform, place two sets of risers underneath the platform. Stand tall with your abdominals pulled in, the balls of your feet firmly planted on the step, and your heels hanging over the edge. Rest your hands against a wall or a sturdy object for balance. Raise your heels a few inches above the edge of the step so that you’re on your tiptoes. Hold the position for a moment, and then lower your heels below the platform, feeling a stretch in your calf muscles.",
+    ],
+  },
+  {
+    type: "Resistance",
+    muscleGroup: "Calves",
+    name: "Box Jumps",
+    img_url: "https://imgur.com/HRS82C5.jpg",
+    equipment: "Fitness Plyo Boxes/Box Jumps",
+    steps: ["Load slowly by squatting to just above parallel and bring arms back behind hips to help launch off the ground. Explode with a strong forward-arm swing, and tuck the knees after you've fully extended your legs. Land on the box softly, in the same squat depth you jumped with. Stand up tall, locking hips to finish the movement. Step down and rest. ",
+    ],
+  },
+  {
+    type: "Resistance",
+    muscleGroup: "Calves",
+    name: "High Knees",
+    img_url: "https://imgur.com/YuIxC2T.jpg",
+    equipment: "No Equipment ",
+    steps: ["Start standing with feet hip-distance apart. Lift right knee as high as it will go and raise the opposite arm, then switch quickly so left knee is up before right foot lands. Continue pulling knees up quirky for as long as desired.",
+    ],
+  },
+  {
+    type: "Resistance",
+    muscleGroup: "Calves",
+    name: "Agility Ladder",
+    img_url: "https://imgur.com/7Q50VCP.jpg",
+    equipment: "Agility Ladder",
+    steps: ["Stand to the side of the ladder, but face it so the squares are in front of you. Step each foot into and out of each square, making your way laterally along the side of the ladder. Once you reach the other side, repeat the same movement but in the other direction, making your way back to the side you started on.",
+    ],
+  },
+  {
+    type: "Resistance",
+    muscleGroup: "Calves",
+    name: "Bosu Ball Squat",
+    img_url: "https://imgur.com/16PNIgK.jpg",
+    equipment: "Bosu Ball",
+    steps: ["Place a BOSU Ball on the ground with the blue rubber side facing up. Carefully, place one foot on each side of the rubber surface. Hold on to a stable surface while doing so, if need be. Maintain a straight back, tighten your core, and keep your chest up. Once balanced, bend at the knees and slowly drive your hips back. Lower your body to a comfortable level. Ideally, your thighs will be parallel with the ground. Pause at the bottom then contract your quadriceps and glutes to return to the starting position. Keep the knees slightly bent for the entire exercise. Repeat.",
+    ],
+  },
+  {
+    type: "Resistance",
+    muscleGroup: "Calves",
+    name: "Seated Band Pushes",
+    img_url: "https://imgur.com/yKYjsTZ.jpg",
+    equipment: "Flat Bench/Resistance Band",
+    steps: ["1. Sit on a flat bench with your back straight and your feet on the floor. It should be sitting like you are sitting in a straight back chair. Your hands should be holding on to the side of the bench near your hips. 2. Put a resistance band around both legs at the knees. 3. In one motion, push your knees away from each other and then push back to touching each other. It should look like your are doing a butterfly with your knees.",
+    ],
+  },
+  {
+    type: "Resistance",
+    muscleGroup: "Calves",
+    name: "Dumbell Jump Squat",
+    img_url: "https://imgur.com/yZxtliE.jpg",
+    equipment: "Dumbells",
+    steps: ["1. Grab a pair of dumbbells and hold them at your side with palms facing each other. Position feet into a shoulder-width stance. 2. Drop your hips into a full squat position, while bringing thighs parallel to ground. 3. Using the downward momentum, reverse directions and drive your hips to the ceiling. Jump as high as possible, while keeping the dumbbells at your sides. Upon landing, descend back into squat position.",
+    ],
+  },
+  {
+    type: "Resistance",
+    muscleGroup: "Calves",
+    name: "Butt Kicks",
+    img_url: "https://imgur.com/8kJTrvU.jpg",
+    equipment: "No Equipment",
+    steps: ["1. Stand tall with your feet shoulder-width apart and face forward. 2. Start kicking your feet up, until the heels touch the glutes, and pump your arms at the same time. 3. Repeat until set is complete.",
+    ],
+  },
+  {
+    type: "Resistance",
+    muscleGroup: "Calves",
+    name: "Weighted Calf Rock",
+    img_url: "https://imgur.com/neBzhob.jpg",
+    equipment: "Barbell/Squat Rack",
+    steps: ["1. Stand inside a squat rack with a barbell positioned at a correct level for your height. 2. Step back, bend your knees, and then raise the barbell onto the back of your shoulders by straightening your knees. 3. Step forward and stand with your legs slightly more than shoulder width apart, your knees slightly bent, and your toes pointing slightly outwards. This is your starting position. 4. Exhaling, raise up onto your toes by lifting your heels off the ground as high as you can but without moving your knees. 5. Hold for a moment and then inhale as your lower your heels back down and return to the starting position. 6. Exhaling, raise your toes off of the ground as high as you can without moving your knees. 7. Hold for a moment and then inhale as your lower your toes back down and return to the starting position. 8. Repeat for a full set."
+    ],
+  },
+
+  {
+    type: "Resistance",
+    muscleGroup: "Core",
+    name: "Bridge",
+    img_url: "https://imgur.com/sTZFthd.jpg",
+    equipment: "Mat-if desired",
+    steps: ["Tighten your abdominal and buttock muscles by pushing your low back into the ground. Raise your hips to create a straight line from your knees to your shoulders. Squeeze your core and pull your belly button back toward your spine. Hold for 20 to 30 seconds. Lower the hips to return to the starting position.",
+    ],
+  },
+  {
+    type: "Resistance",
+    muscleGroup: "Core",
+    name: "Crunches",
+    img_url: "https://imgur.com/Qg9yCb2.jpg",
+    equipment: "Mat-if desired",
+    steps: ["Lie down on your back. Plant your feet on the floor, hip-width apart. Bend your knees and place your arms across your chest. Contract your abs and inhale. Exhale and lift your upper body, keeping your head and neck relaxed. Inhale and return to the starting position.",
+    ],
+  },
+  {
+    type: "Resistance",
+    muscleGroup: "Core",
+    name: "Ab Wheel Rollout",
+    img_url: "https://imgur.com/xb2XIg6.jpg",
+    equipment: "Ab Roller Wheel",
+    steps: ["Start on both knees with your lower body turned slightly to the right (or left). Place hands on the ab wheel just to the side of the body. Brace the core tightly with arms fully extended, and slowly roll the wheel forward until your body is parallel to the ground. Roll out as far as you can, then roll yourself back to the starting position.",
+    ],
+  },
+  {
+    type: "Resistance",
+    muscleGroup: "Core",
+    name: "Pallof Press",
+    img_url: "https://imgur.com/a3NU5XG.jpg",
+    equipment: "Cables",
+    steps: ["Standing parallel to your cable machine, clasp the handle in both hands, palms together. Position yourself a few feet away from the cable to add tension. Make sure your feet are hip-width apart and your knees are just slightly bent. Bring the handle up to the center of your chest and press out. Extend your arms fully, noting how your body wants to lean toward the cable. Don’t let it. Return your hands to your chest and repeat for 8 to 12 reps on each side.",
+    ],
+  },
+  {
+    type: "Resistance",
+    muscleGroup: "Core",
+    name: "Hanging Leg Raise",
+    img_url: "https://imgur.com/uKOZ5or.jpg",
+    equipment: "Pull-Up Bar",
+    steps: ["Grasp a pull-up bar with your hands shoulder-width apart, using an overhand (pronated) grip. Engage your abdominal muscles and while keeping your torso stable, slowly raise your legs, keeping them straight and driving through your glutes, until they're at 90° with your torso.",
+    ],
+  },
+  {
+    type: "Resistance",
+    muscleGroup: "Core",
+    name: "Dip/Leg Raise Combo",
+    img_url: "https://imgur.com/ylU8F4N.jpg",
+    equipment: "Parallel Bars",
+    steps: ["Suspend yourself over the parallel bars at a dip station. Bend your knees slightly and raise your legs in front of you until they’re parallel to the floor.",
+    ],
+  },
+  {
+    type: "Resistance",
+    muscleGroup: "Core",
+    name: "Side Plank",
+    img_url: "https://imgur.com/LmPGAMX.jpg",
+    equipment: "No Equipment",
+    steps: ["Lie on your right side with your legs straight and feet stacked on top of each other. Place your right elbow under your right shoulder with your forearm pointing away from you and your hand balled into a fist. The pinky side of your hand should be in contact with the ground. With your neck neutral, breathe out and brace your core. Lift your hips off the mat so that you’re supporting your weight on your elbow and the side of your right foot. Your body should be in a straight line from your ankles to your head. Hold this position for the duration of the exercise. Depending on your fitness level, aim for between 15 to 60 seconds. Repeat on your left side.",
+    ],
+  },
+  {
+    type: "Resistance",
+    muscleGroup: "Core",
+    name: "Dead Bug",
+    img_url: "https://imgur.com/EEx9d7q.jpg",
+    equipment: "Mat-if desired",
+    steps: ["1. Lie on your back and extend your arms and legs toward the ceiling. 2. Lower your right leg and extend your left arm behind your head. 3. Return to the starting position and repeat with the opposite arm and leg. 4. Keep switching sides until the set is complete.",
+    ],
+  },
+  {
+    type: "Resistance",
+    muscleGroup: "Core",
+    name: "L-Sit",
+    img_url: "https://imgur.com/dflcV1E.jpg",
+    equipment: "No Equipment",
+    steps: ["1. If you're using two boxes, benches, or parallettes, set them up so that they are a little narrower than shoulder width apart. Stand between them and place your palms on each side so they're under shoulders. 2. Straighten arms, lock elbows at sides, pull shoulder blades down and away from ears, and engage lats. Then, pushing down into palms, engage core lift legs (straight and together) off the floor until they're parallel with (or close to parallel with) the floor. 3. Hold here, keeping knees straight, squeezing quads together tightly, pointing toes, and looking straight ahead to keep a neutral neck.",
+    ],
+  },
+  {
+    type: "Resistance",
+    muscleGroup: "Core",
+    name: "Barbell Hip Thrust",
+    img_url: "https://imgur.com/Szu7JpS.jpg",
+    equipment: "Barbell/Bench",
+    steps: ["Lie on your back with your arms by your sides, your knees bent and your feet planted on the ground. Squeeze your glutes, press through your heels and drive your hips up so you form a straight line from your knees to your shoulders. Hold for a second at the top of the move, then lower slowly.",
+    ],
+  },
+
+
+  
+];
 
 // type: {
-//     type: String, 
+//     type: String,
 //     enum: ['Resistance', 'Cardio'],
-//     required: true 
+//     required: true
 // },
 // muscleGroup: {
 //     type: String,
@@ -187,10 +678,10 @@ const exercises = [
 // steps: Array
 
 function seedExercises() {
-    // Use the Exercise.insertMany() <function> to put a bunch of Exercise (model) into the database
-    // we have to come up with some Exercise (model)
+  // Use the Exercise.insertMany() <function> to put a bunch of Exercise (model) into the database
+  // we have to come up with some Exercise (model)
 
-    Exercise.insertMany([]) // it only can take an array
+  Exercise.insertMany([]); // it only can take an array
 }
 
 // Use the Exercise.insertMany() function to put a bunch of Exercise (model) into the database
